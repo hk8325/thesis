@@ -1,0 +1,107 @@
+\documentclass[12pt,a4paper,twoside,notitlepage]{report}
+
+%Define thesis title etc
+\newcommand{\thesistitle}{Measurement of Highly Non-uniform Residual Stress with Reduced Plasticity Error}
+\newcommand{\thesisauthor}{Ho Kyeom Kim}
+\newcommand{\thesisauthorpdf}{hk.kim}
+\newcommand{\thesiskeywordspdf}{keywords}
+\newcommand{\thesisstatement}{A dissertation submitted to the University of Bristol in accordance with the requirements for award of the degree of Doctor of Philosophy in the Faculty of Engineering}
+\newcommand{\thesisschool}{Department of Mechanical Engineering}
+\newcommand{\thesisdate}{September 2015}
+\newcommand{\thesiswords}{c.\ \num{54000} words}
+\newcommand{\myitem}{\item[{\includegraphics[height=3mm]{sub_black.pdf}}]}
+\newcommand{\uo}{$u_{1}$~}
+\newcommand{\ut}{$u_{2}$~}
+\newcommand{\xo}{$x_{1}$~}
+\newcommand{\xt}{$x_{2}$~}
+\newcommand{\soo}{$\sigma_{11}$}
+\newcommand{\sot}{$\sigma_{12}$}
+\newcommand{\stt}{$\sigma_{22}$}
+\input{0_latex/packages}
+
+%Redefine abstract environment.
+%%Abstract is centred vertically on the page.
+\renewenvironment{abstract}{
+\null \vfil
+\begin{center}
+\bfseries \abstractname
+\end{center}}
+{\par \vfil \null \thispagestyle{plain}}
+	
+%Define new twopageabstract environment.
+%%Redefined abstract does not work when abstract is longer than a page, twopageabstract is not centred vertically.
+\newenvironment{twopageabstract}{
+\begin{center}
+\bfseries \abstractname
+\end{center}}
+{\thispagestyle{plain}}
+
+% Header and footer
+\pagestyle{fancy}
+%% Clear all header fields
+\fancyhead{}
+%% New headers
+\fancyhead[RO]{\slshape \nouppercase{\rightmark}}
+\fancyhead[LE]{\slshape \nouppercase{\leftmark}}
+%% Clear all footer fields
+\fancyfoot{}
+%% New footer
+\fancyfoot[C]{\thepage}
+%% Remove lines
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+%Reduce orphan text
+\clubpenalty=10000
+\widowpenalty=10000
+
+%New commands
+
+\newcommand{\chapterref}{Chapter~\ref}
+\newcommand{\sectionref}{Section~\ref}
+\newcommand{\subsectionref}{Subsection~\ref}
+\newcommand{\appendixref}{Appendix~\ref}
+\newcommand{\chaptersref}{Chapters~\ref}
+
+\newcommand{\figureref}{Figure~\ref}
+\newcommand{\figref}{Figure~\ref}
+\newcommand{\figurerefs}{Figures~\ref}
+\newcommand{\figsref}{Figures~\ref}
+
+\newcommand{\tableref}{Table~\ref}
+
+\newcommand{\eqnref}{Equation~\ref}
+\newcommand{\equationref}{Equation~\ref}
+\newcommand{\eqnsref}{Equations~\ref}
+\newcommand{\equationsref}{Equations~\ref}
+
+%Select Bibtex file
+%\addbibresource{ThesisLit.bib} %%%% DVG COMMENTED THIS %%%%
+
+%stop superscripts being bold
+\renewcommand{\glsnamefont}[1]{\textrm{\mdseries #1}}
+
+
+%define sections
+\newglossary[llg]{latinsymbols}{lyi}{lyg}{Latin characters}
+\newglossary[glg]{greeksymbols}{gyi}{gyg}{Greek characters}
+\newglossary[alg]{abbreviations}{ayi}{ayg}{Abbreviations}
+\makeglossaries
+
+%Select nomenclature file
+\input{1_front_matter/symbols.tex}
+
+
+%print all symbols
+\glsaddall[types={abbreviations,latinsymbols,greeksymbols}]
+\hyphenation{disser-tation}
+
+%% DVG
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+
+%\renewcommand{\abstractname}{Synopsis}
+
+\addto{\captionsbritish}{\renewcommand{\abstractname}{Synopsis}}
+% new commands for tables
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{L}[1]{>{\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}

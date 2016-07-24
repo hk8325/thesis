@@ -1,0 +1,136 @@
+\pdfbookmark[0]{Front matter}{frontmatter}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%Title Page%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pdfbookmark[1]{Title page}{title}
+\begin{titlepage}
+\centering
+\LARGE \thesistitle \par
+\vfill
+\LARGE \thesisauthor \par
+\vfill
+\large \thesisstatement \par
+\bigskip
+\large \thesisschool \par
+\large \thesisdate \par
+\raggedleft \normalsize \thesiswords
+\end{titlepage}
+\thispagestyle{empty}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%Abstract%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\clearpage{\thispagestyle{empty}\cleardoublepage}
+
+\pdfbookmark[1]{\abstractname}{\abstractname}
+\begin{abstract}
+\input{1_front_matter/abstract}
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%Dedication%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\clearpage{\thispagestyle{empty}\cleardoublepage}
+
+\pdfbookmark[1]{Dedication}{dedication}
+\null \vspace{\stretch {1}}
+\begin{center}
+\textit{
+\input{1_front_matter/dedication}
+}
+\end{center}
+\vspace{\stretch {2}}\null
+\thispagestyle{plain}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%Acknowledgements%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\clearpage{\thispagestyle{empty}\cleardoublepage}
+
+\renewcommand{\abstractname}{Acknowledgements}
+\pdfbookmark[1]{\abstractname}{\abstractname}
+\begin{twopageabstract}
+\input{1_front_matter/acknowledgements}
+\end{twopageabstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%Author's declaration%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\clearpage{\thispagestyle{empty}\cleardoublepage}
+
+\renewcommand{\abstractname}{Author's declaration}
+\pdfbookmark[1]{\abstractname}{\abstractname}
+\begin{abstract}
+\input{1_front_matter/declaration}
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%Publications%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\clearpage{\thispagestyle{empty}\cleardoublepage}
+
+\renewcommand{\abstractname}{Publications}
+\pdfbookmark[1]{\abstractname}{\abstractname}
+\begin{abstract}
+\input{1_front_matter/publications}
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Table of Contents%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\clearpage{\thispagestyle{empty}\cleardoublepage}
+
+\renewcommand{\contentsname}{Table of Contents}
+\phantomsection
+\pdfbookmark[0]{\contentsname}{\contentsname}
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%List of Tables%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\clearpage{\thispagestyle{empty}\cleardoublepage}
+
+\phantomsection
+\addcontentsline{toc}{chapter}{\listtablename}
+\listoftables
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% List of Figures%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\clearpage{\thispagestyle{empty}\cleardoublepage}
+
+\phantomsection
+\addcontentsline{toc}{chapter}{\listfigurename}
+\listoffigures
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% List of Symbols%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\clearpage{\thispagestyle{empty}\cleardoublepage}
+
+\chapter*{Nomenclature}
+\phantomsection
+\addcontentsline{toc}{chapter}{Nomenclature}
+
+\onehalfspacing
+
+\printglossary[type=abbreviations]
+
+\clearpage
+
+\printglossary[type=latinsymbols]
+
+\clearpage
+
+\printglossary[type=greeksymbols]

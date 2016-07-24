@@ -1,0 +1,176 @@
+% AMS packages
+\usepackage{amsmath,amssymb,amsthm}
+
+% Graphics
+\usepackage{graphicx}												
+\usepackage{xcolor}
+\usepackage{makeidx}
+\usepackage{afterpage}
+\usepackage{pdflscape}
+% Margins.
+% Text 140x210, 2:3 ratio, 2mm wider than default, 2mm shorter
+\usepackage[
+    a4paper,
+    twoside,
+    inner=40mm,
+    outer=30mm,
+    textheight=230mm,
+    headheight=8mm,
+    top=36mm
+    ]{geometry}
+
+% Required for biblatex
+\usepackage{csquotes}
+\usepackage{notoccite}
+%%%%%%%%%%%%%%%% DVG COMMENTED THIS %%%%%%%%%%%%%%%
+%\usepackage[
+%    style=authoryear,
+%    sorting=nyt,
+%    doi=true,
+%    isbn=true,
+%    url=false,
+%    urldate=short,
+%    eprint=false,
+%    maxcitenames=3,
+%    maxbibnames=99,
+%%    maxalphanames=4,
+%%    minalphanames=3,
+%    firstinits = true, %sorts out initials in bibliography
+%    uniquename=false, %removes initials from citations, placed due to ambiguity
+%    uniquelist=false,
+%    backend=biber % use biber not bibtex
+%]{biblatex}
+
+%\DeclareCiteCommand{\fullcite}
+%  {\usebibmacro{prenote}}
+%  {\usedriver
+%     {\defcounter{minnames}{6}%
+%      \defcounter{maxnames}{10}}
+%     {\thefield{entrytype}}}
+%  {\multicitedelim}
+%  {\usebibmacro{postnote}}
+%
+%\let\cite\textcite
+%
+%\AtEveryBibitem{\clearfield{issn}}
+%\AtEveryCitekey{\clearfield{issn}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Referencing
+
+\usepackage{rotating}
+% Rotating figures
+\usepackage[font=footnotesize,margin=0.75cm]{caption}
+%% Floats %removes need for hypcap
+%\usepackage[margin=0.75cm]{subcaption} %% DVG COMMENTED THIS %%
+%% Sub floats
+
+\usepackage{multirow}
+\usepackage{tikz}
+\usepackage{ctable}
+% Nicer tables
+\usepackage{makecell}
+% Tables with wrapped text
+
+\usepackage{appendix}
+% Creates appendix
+
+\usepackage{fancyhdr}
+% Header and footers
+
+\usepackage[british]{babel}
+% British dates. use Greek for non italic Greek letters %\greektext \latintext
+
+\usepackage{epstopdf}
+%Converting eps to pdf
+
+\usepackage{siunitx}	
+% SI units
+
+\usepackage{fixltx2e}
+% LaTeX fix
+
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage{todonotes}
+\usepackage{pdfpages}
+
+%\usepackage[section]{placeins}										%put figures in each section
+
+%\usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype} %protrusion=true,expansion=true
+
+\usepackage[protrusion=true,expansion=true]{microtype}
+
+%\usepackage{lmodern}
+%\usepackage[utopia]{mathdesign} % DVG LIKES THIS %
+%\usepackage[urw-garamond]{mathdesign} % does not work%
+\usepackage[charter]{mathdesign} % DVG LIKES THIS %
+%\usepackage{cmbright}  % does not work%
+%\usepackage[T1]{fontenc}
+%\usepackage{gfsartemisia}
+%\usepackage{mathpazo}%Palatino[osf]
+
+%\usepackage[T1]{fontenc}
+%\usepackage{lmodern}
+
+\usepackage[
+    pdftex,
+    pdftitle={\thesistitle},
+    pdfauthor={\thesisauthorpdf},
+    pdfsubject={Ph.D. dissertation},
+    pdfkeywords={\thesiskeywordspdf},
+    %pdfpagelayout={TwoPageRight},
+    pdfpagelayout={SinglePage},
+    bookmarks,
+    bookmarksnumbered={True},
+    pdfstartview={FitV},
+    pdfstartpage={1},
+    colorlinks,
+    linkcolor={black},
+    citecolor={black},
+    urlcolor={black},
+]{hyperref}
+%Hyperlinks
+
+\usepackage{bookmark}
+
+\usepackage[
+    toc,
+    section,
+    nonumberlist,
+    nomain,
+    makeindex,
+    style=long
+    ]{glossaries}
+\setlength{\glsdescwidth}{0.8\linewidth}
+
+\makeatletter
+\newcommand{\vast}{\bBigg@{3}}
+\newcommand{\Vast}{\bBigg@{5}}
+\makeatother
+
+%useful for ToC with no numbers for thesis outline
+%\usepackage{tocloft}
+%% \cftpagenumbersoff{chapters}
+%\addtocontents{toc}{\cftpagenumbersoff{chapter}}
+%\addtocontents{toc}{\cftpagenumbersoff{section}}
+%\addtocontents{toc}{\cftpagenumbersoff{subsection}}
+%\renewcommand{\cftdot}{} %empty {} for no dots. you can have any symbol inside. For example put {\ensuremath{\ast}} and see what happens.
+
+% DVG PACKAGES
+
+\usepackage{subfigure}
+\usetikzlibrary{decorations.pathmorphing,patterns,calc,arrows,shapes,snakes}
+\usepackage{curves}
+\usepackage{caption}
+\usepackage{multirow}
+\usepackage{colortbl}
+\usepackage{grffile}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{soul}
+\usepackage{breqn}
+\usepackage[sort&compress]{natbib}
+%\usepackage{xfrac}
+%\usepackage[numbered,framed]{mcode}
+\usepackage{enumitem}
